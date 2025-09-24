@@ -33,13 +33,13 @@ class Triangle(Shape):
         super().__init__(color)
        
         if not isinstance(side_1, int):
-            ValueError("Side 1 must be numeric.")
+            raise ValueError("Side 1 must be numeric.")
 
         if not isinstance(side_2, int):
-            ValueError("Side 2 must be numeric.")
+            raise ValueError("Side 2 must be numeric.")
 
         if not isinstance(side_3, int):
-            ValueError("Side 3 must be numeric.")
+            raise ValueError("Side 3 must be numeric.")
 
         if not (side_1 + side_2 > side_3 and side_1 + side_3 > side_2 and side_2 + side_3 > side_1):
             raise ValueError("The sides do not satisfy the Triangle Inequality Theorem.")
@@ -55,14 +55,14 @@ class Triangle(Shape):
         Returns:
             str: A string describing the triangle's color and side lengths.
         """
-        return f"The shape color is {self.color} ./n This triangle has three sides with lengths of {self.side_1}, {self.side_2} and {self.side_3} centimeters"
+        return f"The shape color is {self.color} .\n This triangle has three sides with lengths of {self.__side_1}, {self.__side_2} and {self.__side_3} centimeters"
         
     def calculate_area(self):
         """
         Calculates the area of the triangle.
         """
-        semi_perimeter = (self.side_1 + self.side_2 + self.side_3) / 2
-        area = math.sqrt(semi_perimeter * (semi_perimeter - self.side_1) * (semi_perimeter - self.side_2) * (semi_perimeter - self.side_3))
+        semi_perimeter = (self.__side_1 + self.__side_2 + self.__side_3) / 2
+        area = math.sqrt(semi_perimeter * (semi_perimeter - self.__side_1) * (semi_perimeter - self.__side_2) * (semi_perimeter - self.__side_3))
         
         return area
     
@@ -70,7 +70,7 @@ class Triangle(Shape):
         """
         Calculates the perimeter of the triangle.
         """
-        perimeter = self.side_1 + self.side_2 + self.side_3
+        perimeter = self.__side_1 + self.__side_2 + self.__side_3
         
         return perimeter
     
