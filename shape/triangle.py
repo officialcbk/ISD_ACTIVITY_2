@@ -55,7 +55,7 @@ class Triangle(Shape):
         Returns:
             str: A string describing the triangle's color and side lengths.
         """
-        return f"The shape color is {self.color} .\n This triangle has three sides with lengths of {self.__side_1}, {self.__side_2} and {self.__side_3} centimeters"
+        return f"The shape color is {self.color}.\n This triangle has three sides with lengths of {self.__side_1}, {self.__side_2} and {self.__side_3} centimeters."
         
     def calculate_area(self):
         """

@@ -51,7 +51,7 @@ class TestTriangle(unittest.TestCase):
         self.assertEqual(str(context.exception), "The sides do not satisfy the Triangle Inequality Theorem.")
 
     def test_str_returns_expected_string(self):
-        expected_string = "The shape color is Red .\n This triangle has three sides with lengths of 4, 5 and 6 centimeters"
+        expected_string = "The shape color is Red.\n This triangle has three sides with lengths of 4, 5 and 6 centimeters."
         self.assertEqual(str(self.triangle), expected_string)
     
     def test_calculate_area_returns_expected_value(self):
