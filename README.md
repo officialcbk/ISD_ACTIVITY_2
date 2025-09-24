@@ -9,8 +9,12 @@ This activity will help to reinforce learning of the Module 2 concepts of:
 
 ## Author
 
-[Your name]
+Emmanuel Eze
 
 ## Additional Information
 
-[ Use this space to include additional information that may help in your learning. ]
+Protected attributes uses #,and does not require name mangling
+Abstract class uses italics on the UML
+You cannot directly test an abstract class
+
+
