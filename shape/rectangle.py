@@ -13,7 +13,7 @@ class Rectangle(Shape):
         """
         Initializes a Rectangle instance with the specified color, length and width.
         
-        Attributes:
+        Args:
             color(str): The color of the rectangle
             length(int): The length of the rectangle
             width(int): The width of the rectangle
@@ -42,8 +42,13 @@ class Rectangle(Shape):
         Returns:
             str: A string describing the rectangle's color, length and width.
         """
-        return f"The shape color is {self.color}.\n This rectangle has four sides with the lengths of {self.__length}, {self.__width}, {self.__length} and {self.__width} centimeters."
-        
+       
+        return (
+            f"The shape color is {self.color}.\n"
+            f"This rectangle has four sides with the lengths of "
+            f"{self.__length}, {self.__width}, "
+            f"{self.__length} and {self.__width} centimeters."
+        )
     def calculate_area(self) -> float:
         """
         Calculates the area of the rectangle.

@@ -28,8 +28,9 @@ def main():
     # Append the Triangle to the list of shapes.
 
     try:
-        onetriangle = Triangle("Grey", 3, 4, 5)
-        shapes.append(onetriangle)
+        one_triangle = Triangle("Grey", 3, 4, 5)
+        shapes.append(one_triangle)
+
     except ValueError as e:
         print(e)
 
@@ -38,8 +39,9 @@ def main():
     # Append the Rectangle to the list of shapes.
 
     try:
-        onerectangle = Rectangle("Violet", 14, 7)
-        shapes.append(onerectangle)
+        one_rectangle = Rectangle("Violet", 14, 7)
+        shapes.append(one_rectangle)
+
     except ValueError as e:
         print(e)
 
@@ -48,14 +50,22 @@ def main():
     # Append these instances to the list of shapes.
 
     try:
-        secondtriangle = Triangle("Blue", 5, 12, 13)
-        shapes.append(secondtriangle)
+        second_triangle = Triangle("Blue", 5, 12, 13)
+        shapes.append(second_triangle)
 
-        secondrectangle = Rectangle("Orange", 10, 4)
-        shapes.append(secondrectangle)
+    except ValueError as e:
+        print(e)
+    
+    try:
+        second_rectangle = Rectangle("Orange", 10, 4)
+        shapes.append(second_rectangle)
 
-        thirdrectangle = Rectangle("Red", 8, 6)
-        shapes.append(thirdrectangle)  
+    except ValueError as e:
+        print(e)
+    
+    try:
+        third_rectangle = Rectangle("Red", 8, 6)
+        shapes.append(third_rectangle)  
         
     except ValueError as e:
         print(e)

@@ -40,7 +40,10 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(str(context.exception), "Width must be numeric.")     
 
     def test_str_returns_expected_string(self):
-        expected = "The shape color is Blue.\n This rectangle has four sides with the lengths of 10, 15, 10 and 15 centimeters."
+        expected = (
+            "The shape color is Blue.\n"
+            " This rectangle has four sides with the lengths of 10, 15, 10 and 15 centimeters."
+        )
         self.assertEqual(str(self.rectangle), expected)
     
     def test_calculate_area_returns_expected_value(self):

@@ -15,7 +15,7 @@ class Shape(ABC):
         """
         Initializes a Shape instance with the specified color.
         
-        Attributes:
+        Args:
             color(str): The color of the shape
 
         Raises:

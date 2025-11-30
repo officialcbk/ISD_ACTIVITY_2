@@ -15,7 +15,7 @@ class Triangle(Shape):
         """
         Initializes a Triangle instance with the specified color and side lengths.
         
-        Attributes:
+        Args:
             color(str): The color of the triangle
             side_1(int): The length of the first side of the triangle
             side_2(int): The length of the second side of the triangle
@@ -41,7 +41,8 @@ class Triangle(Shape):
         if not isinstance(side_3, int):
             raise ValueError("Side 3 must be numeric.")
 
-        if not (side_1 + side_2 > side_3 and side_1 + side_3 > side_2 and side_2 + side_3 > side_1):
+        if not (side_1 + side_2 > side_3 and side_1 + side_3 > side_2 \
+                and side_2 + side_3 > side_1):
             raise ValueError("The sides do not satisfy the Triangle Inequality Theorem.")
         
         self.__side_1 = side_1
@@ -55,20 +56,33 @@ class Triangle(Shape):
         Returns:
             str: A string describing the triangle's color and side lengths.
         """
-        return f"The shape color is {self.color}.\n This triangle has three sides with lengths of {self.__side_1}, {self.__side_2} and {self.__side_3} centimeters."
-        
+       
+        return (
+            f"The shape color is {self.color}.\n"
+            f"This triangle has three sides with lengths of "
+            f"{self.__side_1}, {self.__side_2} and {self.__side_3} "
+            f"centimeters."
+        )
+
     def calculate_area(self):
         """
         Calculates the area of the triangle.
+
+        Returns:
+            float: The area of the triangle in square centimeters.
         """
         semi_perimeter = (self.__side_1 + self.__side_2 + self.__side_3) / 2
-        area = math.sqrt(semi_perimeter * (semi_perimeter - self.__side_1) * (semi_perimeter - self.__side_2) * (semi_perimeter - self.__side_3))
+        area = math.sqrt(semi_perimeter * (semi_perimeter - self.__side_1) * \
+                         (semi_perimeter - self.__side_2) * (semi_perimeter - self.__side_3))
         
         return area
     
     def calculate_perimeter(self):
         """
         Calculates the perimeter of the triangle.
+
+        Returns:
+            float: The perimeter of the triangle in centimeters.
         """
         perimeter = self.__side_1 + self.__side_2 + self.__side_3
         
